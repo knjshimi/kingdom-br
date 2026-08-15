@@ -5,21 +5,34 @@ export interface Props {
 }
 
 const { href = "/" } = Astro.props as Props;
+const { light, dark } = siteConfig.branding.logo;
 ---
 
 <a href={href} class="logo" aria-label={siteConfig.name}>
-  <span class="logo__mark" aria-hidden="true">{siteConfig.name.charAt(0)}</span>
-  <span class="logo__name">{siteConfig.name}</span>
+  <img
+    src={light}
+    alt=""
+    width="980"
+    height="300"
+    class="logo__img logo__img--light"
+  />
+  <img
+    src={dark}
+    alt=""
+    width="980"
+    height="300"
+    class="logo__img logo__img--dark"
+    aria-hidden="true"
+  />
 </a>
 
 <style>
   .logo {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
     text-decoration: none;
-    color: var(--color-text-primary);
     border-radius: var(--radius-md);
+    flex-shrink: 0;
   }
 
   .logo:focus-visible {
@@ -27,31 +40,21 @@ const { href = "/" } = Astro.props as Props;
     outline-offset: 3px;
   }
 
-  .logo__mark {
-    display: inline-grid;
-    place-items: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: var(--radius-lg);
-    background: var(--color-brand-primary);
-    color: var(--primary-foreground);
-    font-weight: 800;
-    font-size: 1rem;
-    flex-shrink: 0;
+  .logo__img {
+    display: block;
+    height: var(--spacing-7);
+    width: auto;
   }
 
-  .logo__name {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.0625rem;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
+  .logo__img--dark {
+    display: none;
   }
 
-  /* Keep the brand compact on small screens — monogram remains. */
-  @media (max-width: 26rem) {
-    .logo__name {
-      display: none;
-    }
+  :global(.dark) .logo__img--light {
+    display: none;
+  }
+
+  :global(.dark) .logo__img--dark {
+    display: block;
   }
 </style>

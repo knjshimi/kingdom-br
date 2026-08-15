@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#2563eb"/>
-  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="system-ui" font-weight="700" font-size="18">A</text>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="16" y="256" width="339.411" height="339.411" transform="rotate(-45 16 256)" fill="#373435"/>
+<mask id="mask0_2_29" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="16" y="16" width="480" height="481">
+<rect x="16" y="256" width="339.411" height="339.411" transform="rotate(-45 16 256)" fill="#373435"/>
+</mask>
+<g mask="url(#mask0_2_29)">
+<path d="M380.496 170.573H329.417L246.658 256.002H175.467V170.573H129.905V-11.6754H380.496V170.573Z" fill="#EC7937"/>
+</g>
+<path d="M129.905 142.095H247.83V171.49H218.349V340.51H236.775V369.905H129.905V340.51H159.386V171.49H129.905V142.095ZM273.627 171.49V142.095H380.496V171.49L349.817 171.49L285.603 241.762L354.977 340.51H380.496V369.905H258.886V340.51H284.406L227.009 256L306.701 171.49H273.627Z" fill="white"/>
 </svg>

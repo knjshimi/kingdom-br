@@ -6,10 +6,25 @@ export interface Props {
 }
 
 const { href = "/" } = Astro.props as Props;
+const { light, dark } = siteConfig.branding.logo;
 ---
 
 <a href={href} class="ui-logo" aria-label={siteConfig.name}>
-  <span class="ui-logo__mark">{siteConfig.name.charAt(0)}</span>
+  <img
+    src={light}
+    alt=""
+    width="980"
+    height="300"
+    class="ui-logo__img ui-logo__img--light"
+  />
+  <img
+    src={dark}
+    alt=""
+    width="980"
+    height="300"
+    class="ui-logo__img ui-logo__img--dark"
+    aria-hidden="true"
+  />
 </a>
 
 <style>
@@ -18,16 +33,24 @@ const { href = "/" } = Astro.props as Props;
     align-items: center;
     text-decoration: none;
     color: inherit;
+    flex-shrink: 0;
   }
 
-  .ui-logo__mark {
-    display: inline-grid;
-    place-items: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 9999px;
-    background: var(--color-brand-primary);
-    color: white;
-    font-weight: 800;
+  .ui-logo__img {
+    display: block;
+    height: var(--spacing-7);
+    width: auto;
+  }
+
+  .ui-logo__img--dark {
+    display: none;
+  }
+
+  :global(.dark) .ui-logo__img--light {
+    display: none;
+  }
+
+  :global(.dark) .ui-logo__img--dark {
+    display: block;
   }
 </style>
