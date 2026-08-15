@@ -7,8 +7,8 @@ sidebar:
 
 ## Prerequisites
 
-- **Node.js 24+** (use [fnm](https://github.com/Schniz/fnm) or [nvm](https://github.com/nvm-sh/nvm))
-- **pnpm 8.15+** (`corepack enable && corepack prepare pnpm@8.15.0 --activate`)
+- **Node.js 24.18.0** (use [fnm](https://github.com/Schniz/fnm) or [nvm](https://github.com/nvm-sh/nvm))
+- **pnpm 11.21.0** (`corepack enable && corepack prepare pnpm@11.21.0 --activate`)
 - **Cloudflare Account** (free tier works)
 
 ## Clone & Install

@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Node.js 24+
-- pnpm 8.15+ (`corepack enable && corepack prepare pnpm@8.15.0 --activate`)
+- Node.js 24.18.0
+- pnpm 11.21.0 (`corepack enable && corepack prepare pnpm@11.21.0 --activate`)
 - A Cloudflare account (free tier works) — only needed to deploy
 
 ## Local development
