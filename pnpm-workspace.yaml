@@ -1,0 +1,11 @@
+engineStrict: true
+shamefullyHoist: true
+autoInstallPeers: true
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+
+minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  - 'ohash@2.0.12'
